@@ -1,12 +1,194 @@
 /* base styles */
 body {
-    font-family: "Montserrat", sans-serif;
-    
+  font-family: "Montserrat", sans-serif;
+  background-color: #FAFAFA;
+  color:#111111;
 }
+/* Default values */
+  /* font-size: 16px;
+    font-weight: 400; p
+    font-weight: 700; h1-h6
+    font-style: normal;
+    line-height: 1.15;
+    text-indent: 0;
+    text-align: left;
+    text-transform: none;
+    letter-spacing: normal;
+    letter-shadow: none;*/
 
 /* reset styles */
+ol,
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+button {
+  font-family: inherit;
+  color: currentColor;
+  background-color: transparent;
+  cursor: pointer;
+}
 
 /* common styles */
+.hero,
+.benefits-captain,
+.footer {
+  color: #FFF;
+}
+.benefits,
+.footer {
+  background-color: #1E1823;
+}
+.accent {
+  color: var(--orange, #FD9222);
+}
+.products-text,
+.reviews-message {
+  color: rgba(17, 17, 17, 0.70);
+}
+.sellers-captain,
+.reviews-item {
+  background-color: #FFF;
+}
+.header-link,
+.hero-btn,
+.hero-scroll,
+.benefits-text,
+.ingredients-text,
+.made-text,
+.products-btn,
+.reviews-message,
+.footer-social,
+.footer-caption,
+.footer-address-link,
+.footer-menu-link {
+  font-size: 14px;
+}
+.header-logo,
+.benefits-captain,
+.made-captain,
+.products-captain,
+.sellers-captain,
+.reviews-user,
+.reviews-btn {
+  font-size: 18px;
+}
+.ingredients-subject,
+.made-subject,
+.products-subject,
+.sellers-subject,
+.reviews-subject {
+  font-size: 24px;
+}
+.hero-title,
+.footer-slogan {
+  font-size: 28px;
+  line-height: 1.21;
+}
+.header-link,
+.hero-title,
+.hero-scroll,
+.footer-slogan,
+.footer-social,
+.footer-caption,
+.footer-menu-link {
+  font-weight: 500;
+}
+.hero-btn,
+.benefits-captain,
+.ingredients-subject,
+.made-subject,
+.products-subject,
+.sellers-subject,
+.reviews-subject,
+.ingredients-text,
+.made-captain,
+.products-captain,
+.products-btn,
+.sellers-captain,
+.reviews-user,
+.reviews-btn {
+  font-weight: 600;
+}
+.hero-btn,
+.products-btn,
+.reviews-btn {
+  line-height: normal;
+}
+.header-link,
+.footer-menu-link {
+  line-height: 1.14;
+}
+.ingredients-subject,
+.made-subject,
+.products-subject,
+.sellers-subject,
+.reviews-subject,
+.products-text {
+  line-height: 1.17;
+}
+.hero-scroll,
+.benefits-text,
+.ingredients-text,
+.made-text,
+.reviews-message,
+.footer-social,
+.footer-caption,
+.footer-address-link {
+  line-height: 1.29;
+}
+.made-captain,
+.products-captain,
+.sellers-captain,
+.reviews-user {
+  line-height: 1.33;
+}
+.header-link,
+.benefits-text,
+.ingredients-text,
+.made-text,
+.products-captain,
+.products-text,
+.sellers-captain,
+.reviews-message,
+.footer-slogan,
+.footer-address-link {
+  letter-spacing: -0.02em;
+}
+.header-logo,
+.hero-title,
+.hero-scroll,
+.ingredients-subject,
+.made-subject,
+.products-subject,
+.sellers-subject,
+.reviews-subject {
+  letter-spacing: -0.03em;
+}
+.ingredients-subject,
+.made-subject,
+.products-subject,
+.sellers-subject,
+.reviews-subject,
+.reviews-user,
+.reviews-message,
+.footer-address-link {
+  text-align: center;
+}
+.ingredients-subject,
+.ingredients-text
+.made-subject,
+.products-subject,
+.sellers-subject,
+.reviews-subject,
+.products-captain,
+.sellers-captain {
+  text-transform: uppercase;
+}
 .socials {
 }
 .socials-item {
@@ -15,8 +197,6 @@ body {
 }
 .socials-icon {
 }
-.accent {
-}
 
 /* header */
 .header {
@@ -24,8 +204,11 @@ body {
 .header-nav {
 }
 .header-logo {
+  font-weight: 700;
+  line-height: 1.11;
 }
 .header-logo-accent {
+  font-style: italic;
 }
 .header-logo-img {
 }
@@ -41,6 +224,7 @@ body {
 
 /* hero section */
 .hero {
+  background-color: rgba(17, 17, 17, 0.70);
 }
 .hero-title {
 }
@@ -50,19 +234,29 @@ body {
 }
 .hero-btn {
 }
+.hero-btn.primary {
+  background-color: var(--orange, #FD9222);
+}
+.hero-btn.secondary {
+
+}
 .hero-scroll {
 }
 
 /* benefits */
 .benefits {
 }
+.benefits-subject {
+}
 .benefits-list {
 }
 .benefits-item {
 }
 .benefits-captain {
+  line-height: 1.22;
 }
 .benefits-text {
+  color: rgba(255, 255, 255, 0.70);
 }
 
 /* ingredients section */
@@ -102,6 +296,7 @@ body {
 .products-subject {
 }
 .products-list {
+ 
 }
 .products-item {
 }
@@ -110,14 +305,17 @@ body {
 .products-captain {
 }
 .products-text {
+  font-size: 12px;
 }
 .products-btn {
+  background-color: #FAFAFA;
 }
 
 /* top sellers section */
 .sellers {
 }
 .sellers-subject {
+
 }
 .sellers-list {
 }
@@ -126,12 +324,14 @@ body {
 .sellers-img {
 }
 .sellers-captain {
+  
 }
 
 /* reviews section */
 .reviews {
 }
 .reviews-subject {
+  
 }
 .reviews-list {
 }
@@ -153,9 +353,16 @@ body {
 }
 .footer-social {
 }
-.footer-socials {
+.footer-social.socials {
+}
+.socials-item {
+}
+.socials-link {
+}
+.socials-icon {
 }
 .footer-address {
+  font-style: normal;
 }
 .footer-caption {
 }
@@ -164,10 +371,11 @@ body {
 .footer-address-item {
 }
 .footer-address-link {
+  font-weight: 400;
 }
 .footer-menu {
 }
 .footer-menu-item {
 }
-.footer-menu-link {
+.footer-menu-link { 
 }
