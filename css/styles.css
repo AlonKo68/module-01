@@ -17,10 +17,18 @@ body {
     letter-shadow: none;*/
 
 /* reset styles */
+h1,
+h2,
+h3, 
+p {
+ margin: 0;
+}
 ol,
 ul,
 li {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 a {
   color: currentColor;
@@ -31,6 +39,18 @@ button {
   color: currentColor;
   background-color: transparent;
   cursor: pointer;
+  padding: 0;
+  border: none;
+}
+.container { 
+  width: 1168px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+/* подсветка */
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 
 /* common styles */
@@ -83,6 +103,10 @@ button {
 .sellers-subject,
 .reviews-subject {
   font-size: 24px;
+  width: 412px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-title,
 .footer-slogan {
@@ -213,6 +237,7 @@ button {
 .header-logo-img {
 }
 .header-list {
+ 
 }
 .header-item {
 }
@@ -223,7 +248,7 @@ button {
 
 
 /* hero section */
-.hero {
+.hero>.container {
   background-color: rgba(17, 17, 17, 0.70);
 }
 .hero-title {
@@ -237,14 +262,27 @@ button {
 .hero-btn.primary {
   background-color: var(--orange, #FD9222);
 }
-.hero-btn.secondary {
-
+.hero-btn.primary:focus,
+.hero-btn.primary:hover {
+  background-color: #FCF1E0;
+  color: #FD9222;
 }
+
+.hero-btn.secondary {
+}
+.hero-btn.secondary:focus,
+.hero-btn.secondary:hover,
+.hero-scroll:focus,
+.hero-scroll:hover{
+  color: #FD9222;
+ }
+
 .hero-scroll {
 }
 
 /* benefits */
 .benefits {
+
 }
 .benefits-subject {
 }
@@ -344,6 +382,11 @@ button {
 .reviews-message {
 }
 .reviews-btn {
+}
+.reviews-btn:focus,
+.reviews-btn:hover {
+  background-color: #FD9222;
+  color: #FFF;
 }
 
 /* footer */
