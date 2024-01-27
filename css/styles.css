@@ -42,6 +42,20 @@ button {
   padding: 0;
   border: none;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* common styles */
 .container { 
   width: 1168px;
   padding-left: 16px;
@@ -49,11 +63,13 @@ button {
   margin-left: auto;
   margin-right: auto;
 /* подсветка */
-  outline: 2px solid red;
+  outline: 1px solid green;
   outline-offset: -2px;
 }
-
-/* common styles */
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .hero,
 .benefits-captain,
 .footer {
@@ -62,6 +78,7 @@ button {
 .benefits,
 .footer {
   background-color: #1E1823;
+  padding: 50px 0px;
 }
 .accent {
   color: var(--orange, #FD9222);
@@ -103,6 +120,7 @@ button {
 .sellers-subject,
 .reviews-subject {
   font-size: 24px;
+  
   width: 412px;
   margin-bottom: 50px;
   margin-left: auto;
@@ -214,102 +232,166 @@ button {
   text-transform: uppercase;
 }
 .socials {
+  display: flex;
+  gap: 14px;
 }
 .socials-item {
 }
 .socials-link {
-}
-.socials-icon {
+  display: flex;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(17, 17, 17, 0.10);
 }
 
 /* header */
 .header {
 }
+.header-container {
+  display: flex;
+  align-items: center;
+}
 .header-nav {
+  display: flex;
+  margin-right: auto;
 }
 .header-logo {
   font-weight: 700;
   line-height: 1.11;
+
+  display: inline-flex;
+  margin-right: 365px;
+  align-items: center;
 }
 .header-logo-accent {
   font-style: italic;
 }
 .header-logo-img {
+ margin-left: 4px;
 }
 .header-list {
- 
-}
-.header-item {
+  display: flex;
+  gap: 24px;
 }
 .header-link {
+  display: flex;
+  padding: 32px 0px;
 }
 .header-socials {
 }
+.socials-icon {
 
+}
 
 /* hero section */
-.hero>.container {
+.hero-container {
   background-color: rgba(17, 17, 17, 0.70);
+  padding: 381px 40px 40px 40px;
+  border-radius: 30px;
+  margin-bottom: 80px;
 }
 .hero-title {
+  max-width: 484px;
+  margin-bottom: 32px;
+}
+.hero-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 .hero-list {
 }
+.button {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+}
+.button:focus,
+.button:hover {
+   color: #FD9222;
+}
 .hero-item {
+
 }
 .hero-btn {
+  padding: 14px 40px;
+  border-radius: 100px;
+  border: 1px solid transparent
 }
-.hero-btn.primary {
+.primary {
   background-color: var(--orange, #FD9222);
 }
-.hero-btn.primary:focus,
-.hero-btn.primary:hover {
+.primary:focus,
+.primary:hover {
   background-color: #FCF1E0;
-  color: #FD9222;
 }
 
-.hero-btn.secondary {
+.secondary {
+  border: 1px solid #FFF;
 }
-.hero-btn.secondary:focus,
-.hero-btn.secondary:hover,
-.hero-scroll:focus,
-.hero-scroll:hover{
-  color: #FD9222;
- }
-
+.secondary:focus,
+.secondary:hover {
+  border: 1px solid #FD9222;
+}
 .hero-scroll {
+  display: flex;
+}
+.hero-icon { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #FFF;
+}
+.hero-icon:focus,
+.hero-icon:hover {
+  background-color: #FD9222;
 }
 
 /* benefits */
 .benefits {
-
 }
 .benefits-subject {
 }
 .benefits-list {
+ display: flex;
+ gap: 88px;
+ justify-content: center;
+ align-items: flex-start;
 }
 .benefits-item {
+  width: 308px;
 }
 .benefits-captain {
   line-height: 1.22;
+  margin-bottom: 18px;
 }
 .benefits-text {
   color: rgba(255, 255, 255, 0.70);
+  
 }
 
 /* ingredients section */
 .ingredients {
+  padding-top: 120px;
 }
+
 .ingredients-subject {
 }
 
 .ingredients-list {
+ 
 }
 .ingredients-item {
+ 
 }
 .ingredients-img {
+ 
 }
 .ingredients-text {
+  
 }
 
 /* made section */
@@ -317,15 +399,24 @@ button {
 }
 .made-subject {
 }
+.made-wrapper {
+  
+}
 .made-img {
 }
 .made-captain {
-}
+ 
+} 
 .made-list {
+  
+}
+.made-item>img {
+ 
 }
 .made-item {
 }
 .made-text {
+ 
 }
 
 /* products section */
@@ -367,6 +458,7 @@ button {
 
 /* reviews section */
 .reviews {
+  padding-bottom: 120px;
 }
 .reviews-subject {
   
@@ -400,7 +492,8 @@ button {
 }
 .socials-item {
 }
-.socials-link {
+.footer .socials-link {
+  border: 1px solid rgba(255, 255, 255, 0.10);
 }
 .socials-icon {
 }

@@ -25,7 +25,7 @@
 <body>
   <!-- header section -->
   <header class="header" id="home">
-    <div class="container">
+    <div class="header-container container">
       <nav class="header-nav">
         <a class="header-logo" href="./index.html">
           <span class="header-logo-accent">SIMPLY</span> CHOCOLATE
@@ -71,28 +71,35 @@
   <main>
     <!-- hero section -->
     <section class="hero">
-      <div class="container">
+      <div class=" hero-container container">
         <h1 class="hero-title">
           Treat yourself or a loved one to our finest ingredients for a moment
           of pure delight!
         </h1>
-        <ul class="hero-list">
-          <li class="hero-item">
-            <button class="hero-btn primary" type="button">Buy now</button>
-          </li>
-          <li class="hero-item">
-            <button class="hero-btn secondary" type="button">How it&apos;s made</button>
-          </li>
-        </ul>
-        <button class="hero-scroll" type="button">scroll down</button>
+        <div class="hero-btn-wrapper">
+          <ul class="hero-list button">
+            <li class="hero-item">
+              <button class="hero-btn primary" type="button">Buy now</button>
+            </li>
+            <li class="hero-item">
+              <button class="hero-btn secondary" type="button">How it&apos;s made</button>
+            </li>
+          </ul>
+          <button class="hero-scroll button" type="button">
+            scroll down
+            <span class="hero-icon">
+              <img src="/images/icons/scroll-down.svg" alt="scroll down" width="22" height="22">
+            </span>
+          </button>
+        </div>
       </div>
     </section>
 
     <!-- benefits section -->
     <section class="benefits">
       <div class="container">
-        <h2 class="benefits-subject" hidden>Chocolate benefits</h2>
-        <ul class="benefits-list">
+        <h2 class="visually-hidden>Chocolate benefits</h2>
+        <ul class=" benefits-list">
           <li class="benefits-item">
             <h3 class="benefits-captain">Unsurpassed taste</h3>
             <p class="benefits-text">
@@ -121,12 +128,12 @@
               evident in every bite.
             </p>
           </li>
-        </ul>
+          </ul>
       </div>
     </section>
 
     <!-- ingredients section -->
-    <section class="ingredients">
+    <section class="ingredients section">
       <div class="container">
         <h2 class="ingredients-subject">It all adds up to one exceptional <span class="accent">taste</span> sensation
         </h2>
@@ -167,47 +174,54 @@
     </section>
 
     <!-- made section -->
-    <section class="made" id="made">
+    <section class="made section" id="made">
       <div class="container">
         <h2 class="made-subject">How it&apos;s <span class="accent">made</span>?</h2>
-        <img class="made-img" src="./images/made/mading.png" alt="made chocolate" width="600" height="400">
-        <h3 class="made-captain">
-          Try our chocolates today and discover the perfect balance of flavor
-        </h3>
-        <ol class="made-list">
-          <li class="made-item">
-            <p class="made-text">
-              Heat the milk in a saucepan without bringing it to a boil. Add
-              sugar and cocoa powder.
-            </p>
-          </li>
-          <li class="made-item">
-            <p class="made-text">
-              At the same time, prepare a water bath. Melt the butter on it.
-            </p>
-          </li>
-          <li class="made-item">
-            <p class="made-text">
-              "Mix" the milk mixture and already liquid butter. Mix thoroughly
-              with a silicone spatula so that the mass becomes uniform and
-              silky.
-            </p>
-          </li>
-          <li class="made-item">
-            <p class="made-text">Heat the mixture over low heat, letting it barely boil.</p>
-          </li>
-          <li class="made-item">
-            <p class="made-text">
-              Pour the chocolate into special containers (can be replaced with
-              ice molds). Allow to cool and harden.
-            </p>
-          </li>
-        </ol>
+        <div class="made-wrapper">
+          <div class="made-left-side">
+            <img class="made-img" src="./images/made/mading.png" alt="made chocolate" width="600" height="400">
+          </div>
+          <div class="made-right-side">
+            <h3 class="made-captain">
+              Try our chocolates today and discover the perfect balance of flavor
+            </h3>
+            <ol class="made-list">
+              <li class="made-item">
+                <img src="./images/made/Elipse.svg" alt="" width="8" height="8">
+                <p class="made-text">
+                  Heat the milk in a saucepan without bringing it to a boil. Add
+                  sugar and cocoa powder.
+                </p>
+              </li>
+              <li class="made-item">
+                <p class="made-text">
+                  At the same time, prepare a water bath. Melt the butter on it.
+                </p>
+              </li>
+              <li class="made-item">
+                <p class="made-text">
+                  "Mix" the milk mixture and already liquid butter. Mix thoroughly
+                  with a silicone spatula so that the mass becomes uniform and
+                  silky.
+                </p>
+              </li>
+              <li class="made-item">
+                <p class="made-text">Heat the mixture over low heat, letting it barely boil.</p>
+              </li>
+              <li class="made-item">
+                <p class="made-text">
+                  Pour the chocolate into special containers (can be replaced with
+                  ice molds). Allow to cool and harden.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- products section -->
-    <section class="products">
+    <section class="products section">
       <div class="container">
         <h2 class="products-subject">Our <span class="accent">products</span></h2>
         <ul class="products-list">
@@ -264,7 +278,7 @@
     </section>
 
     <!-- top sellers section -->
-    <section class="sellers">
+    <section class="sellers section">
       <div class="container">
         <h2 class="sellers-subject"><span class="accent">Top</span> sellers</h2>
         <ul class="sellers-list">
@@ -287,7 +301,7 @@
     </section>
 
     <!-- reviews section -->
-    <section class="reviews" id="reviews">
+    <section class="reviews section" id="reviews">
       <div class="container">
         <h2 class="reviews-subject"><span class="accent">Chocolate</span> is loved</h2>
         <ul class="reviews-list">
