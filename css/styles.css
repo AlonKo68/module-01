@@ -248,6 +248,10 @@ img {
   border-radius: 10px;
   border: 1px solid rgba(17, 17, 17, 0.10);
 }
+.socials-link:focus,
+.socials-link:hover {
+  border: 1px solid rgba(253, 146, 34, 0.10);
+}
 
 /* header */
 .header {
@@ -465,18 +469,33 @@ img {
 }
 .products-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 24px 18px;
 }
 .products-item {
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.10);
+  background-color: #FFF;
+  text-align: center;
+  padding: 32px 20px;
+  max-width: 270px; 
+  
 }
 .products-img {
 }
 .products-captain {
+ margin-top: 8px;
+ margin-bottom: 2px;
 }
 .products-text {
   font-size: 12px;
+  margin-bottom: 18px;
 }
 .products-btn {
   background-color: #FAFAFA;
+  border-radius: 100px;
+  border: 1px solid rgba(17, 17, 17, 0.10);
+  padding: 8px 20px;
 }
 
 /* top sellers section */
