@@ -54,6 +54,11 @@ button {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} 
 
 /* common styles */
 .container { 
@@ -377,21 +382,41 @@ button {
 .ingredients {
   padding-top: 120px;
 }
-
 .ingredients-subject {
 }
 
 .ingredients-list {
- 
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  /* align-items: flex-start;
+  align-content: flex-start; */
+  
 }
 .ingredients-item {
- 
+  /* чтобы поместились 4 карты в строку */
+  width: calc((100% - 32px * 3) / 4);
+  padding: 28px 23px;
+  border-radius: 15px;
+  border: 1px solid transparent;
+}
+.ingredients-item:nth-child(4n+1) {
+  background-color: #FD9222;
+}
+.ingredients-item:nth-child(4n+3){
+  background-color: #1E1823;
+}
+.ingredients-item:nth-child(odd) {
+  color: #FFFFFF;
+}
+.ingredients-item:nth-child(even) {
+  border: 1px solid #FD9222;
+  background-color: #FFF;
 }
 .ingredients-img {
- 
 }
 .ingredients-text {
-  
+  margin-top: 36px;
 }
 
 /* made section */
@@ -400,23 +425,37 @@ button {
 .made-subject {
 }
 .made-wrapper {
-  
+  display: flex;
+  gap: 20px;
 }
 .made-img {
+  max-width: 600px;
+}
+.made-right-side {
+  padding: 32px;
+  border-radius: 15px;
+  background-color: #FFF;
 }
 .made-captain {
- 
+  max-width: 350px;
+  margin-bottom: 28px;
 } 
 .made-list {
-  
+
 }
 .made-item>img {
- 
+  margin-top: 5px;
+  margin-bottom: 23px;
 }
 .made-item {
+  display: flex;
+  margin-bottom: 24px;
+}
+.made-item:last-child {
+  margin-bottom: 0;
 }
 .made-text {
- 
+  margin-left: 8px;
 }
 
 /* products section */
@@ -425,7 +464,7 @@ button {
 .products-subject {
 }
 .products-list {
- 
+  display: flex;
 }
 .products-item {
 }
