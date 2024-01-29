@@ -478,8 +478,7 @@ img {
   background-color: #FFF;
   text-align: center;
   padding: 32px 20px;
-  max-width: 270px; 
-  
+  width: calc((100% - 18px * 3) / 4);
 }
 .products-img {
 }
@@ -505,13 +504,23 @@ img {
 
 }
 .sellers-list {
+  display: flex;
+  gap: 16px;
 }
 .sellers-item {
+  width: calc((100% - 16px * 2) / 3);
 }
 .sellers-img {
+  border-radius: 15px 15px 0px 0px;
 }
 .sellers-captain {
-  
+  padding: 28px 0px;
+  border-radius: 0px 0px 15px 15px;
+  border-right: 1px solid rgba(17, 17, 17, 0.10);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.10);
+  border-left: 1px solid rgba(17, 17, 17, 0.10);
+  background-color: #FFF;
+  text-align: center;
 }
 
 /* reviews section */
