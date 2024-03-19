@@ -1,5 +1,6 @@
 {
   "svg.preview.background": "editor",
   "workbench.activityBar.location": "side",
-  "workbench.colorTheme": "Default Dark+"
+  "workbench.colorTheme": "Default Dark+",
+  "liveServer.settings.port": 5502
 }
