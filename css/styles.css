@@ -110,7 +110,8 @@ img {
 .hero,
 .benefits-captain,
 .footer,
-.footer-form-btn {
+.footer-form-btn,
+.modal-form-btn {
   color: #FFF;
 }
 .benefits,
@@ -130,7 +131,6 @@ img {
   padding: 50px 0px;
   }
 }
-
 .accent {
   color: var(--orange, #FD9222);
 }
@@ -155,7 +155,8 @@ img {
 .footer-address-desc,
 .footer-address-link,
 .footer-menu-link,
-.footer-form-btn {
+.footer-form-btn,
+.modal-form-btn {
   font-size: 14px;
 }
 .header-logo,
@@ -165,12 +166,18 @@ img {
 .sellers-captain,
 .reviews-user,
 .reviews-btn,
-.footer-form-input {
+.footer-form-input,
+.modal-form-input,
+.modal-form-textarea,
+.modal-form-input::placeholder,
+.modal-form-textarea::placeholder {
   font-size: 18px;
 }
-.subject {
+.subject,
+.modal-desc {
   font-size: 24px;
-  
+}
+.subject {  
   width: 412px;
   margin-bottom: 50px;
   margin-left: auto;
@@ -200,12 +207,19 @@ img {
 .sellers-captain,
 .reviews-user,
 .reviews-btn,
-.footer-form-btn {
+.footer-form-btn,
+.modal-desc,
+.modal-form-btn {
   font-weight: 600;
 }
 .hero-btn,
 .products-btn,
-.reviews-btn {
+.reviews-btn,
+.modal-form-btn,
+.modal-form-input,
+.modal-form-textarea,
+.modal-form-input::placeholder,
+.modal-form-textarea::placeholder {
   line-height: normal;
 }
 .header-menu-link,
@@ -213,7 +227,8 @@ img {
   line-height: 1.14;
 }
 .subject,
-.products-text {
+.products-text,
+.modal-desc {
   line-height: 1.17;
 }
 .hero-scroll,
@@ -251,7 +266,12 @@ img {
 .hero-title,
 .hero-scroll,
 .subject,
-.footer-form-input {
+.footer-form-input,
+.modal-desc,
+.modal-form-input,
+.modal-form-textarea,
+.modal-form-input::placeholder,
+.modal-form-textarea::placeholder {
   letter-spacing: -0.03em;
 }
 .subject,
@@ -263,7 +283,8 @@ img {
 .subject,
 .ingredients-text,
 .products-captain,
-.sellers-captain {
+.sellers-captain,
+.modal-desc {
   text-transform: uppercase;
 }
 .social {
@@ -287,10 +308,22 @@ img {
 .socials-link:hover {
   border: 1px solid rgba(253, 146, 34, 0.10);
 }
+.hero-btn,
+.modal-form-btn {
+  padding: 14px 40px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+}
+.primary,
+.modal-form-btn {
+  background-color: #FD9222;
+}
 .primary:focus,
 .primary:hover,
 .footer-form-btn:hover,
-.footer-form-btn:focus {
+.footer-form-btn:focus,
+.modal-form-btn:focus,
+.modal-form-btn:hover {
   background-color: #FCF1E0;
 }
 .primary:focus,
@@ -298,7 +331,9 @@ img {
 .secondary:focus,
 .secondary:hover,
 .footer-form-btn:hover,
-.footer-form-btn:focus {
+.footer-form-btn:focus,
+.modal-form-btn:focus,
+.modal-form-btn:hover {
   color: #FD9222;
 }
 
@@ -372,19 +407,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-.button:focus,
-.button:hover {
-   color: #FD9222;
-}
 .hero-item {
-}
-.hero-btn {
-  padding: 14px 40px;
-  border-radius: 100px;
-  border: 1px solid transparent
-}
-.primary {
-  background-color: var(--orange, #FD9222);
 }
 .secondary {
   border: 1px solid #FFF;
@@ -394,8 +417,10 @@ img {
   border: 1px solid #FD9222;
 }
 .hero-scroll {
-  display: flex;
-  align-items: center;
+}
+.hero-scroll:focus,
+.hero-scroll:hover {
+  color: #FD9222;
 }
 .hero-icon { 
   display: flex;
@@ -406,10 +431,6 @@ img {
   border-radius: 50%;
   background-color: #FFF;
 }
-.hero-scroll:focus,
-.hero-scroll:hover {
-  color: #FD9222;
-}
 .hero-icon:focus,
 .hero-icon:hover {
   background-color: #FD9222;
@@ -417,8 +438,8 @@ img {
 .hero-scroll-icon {
   fill: #FD9222;
 }
-.hero-scroll-icon:hover,
-.hero-scroll-icon:focus {
+.hero-icon:hover > .hero-scroll-icon,
+.hero-icon:focus > .hero-scroll-icon {
   fill: #FFFFFF;
 }
 
@@ -552,12 +573,14 @@ img {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  
+  color: #FFFFFF;
 }
 
 .made-btn-icon {
   /* fill: #F5F4F4; */
   fill: none;
-  stroke: #FFFFFF;
+  stroke: currentColor;
 }
 .made-right-side {
   width: 516px;
@@ -693,6 +716,8 @@ img {
 /* reviews section */
 .reviews {
   padding-bottom: 120px;
+}
+.reviews-container {
 }
 .reviews-subject {
   margin-bottom: 92px;
@@ -846,4 +871,127 @@ img {
   border: 1px solid transparent;
   border-radius: 100px;
   padding: 17px 40px;
+}
+
+/* modal windows */
+.backdrop {
+  background: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+  /* width: 100%;
+  height: 100%; */
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* closed modal window */
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+.modal-reviews {
+  width: 517px;
+  min-height: 794px;
+  border-radius: 15px;
+  background-color: #FAFAFA;
+  padding: 40px;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-btn-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  min-height: 28px;
+
+  color: 111111;
+}
+
+.modal--btn-close-icon {
+  /* stroke: #111111; */
+  stroke: currentColor;
+}
+.modal-desc {
+  max-width: 298px;
+  text-align: start;
+  margin-bottom: 40px;
+}
+.modal-form {}
+
+.modal-form-wrapper {
+}
+.modal-form-label {
+  color: rgba(64, 64, 64, 0.30);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  
+  display: block;
+  margin-bottom: 8px;
+}
+.modal-form-field {
+  position: relative;
+
+  margin-bottom: 18px;
+}
+.modal-form-input,
+.modal-form-textarea {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 13px;
+  box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  /* убрать обводку инпута */
+  outline: transparent;
+
+  color: #404040;
+}
+.modal-form-input {
+  height: 68px;
+  /* отодвинуть ввод от края */
+  padding-left: 62px;
+}
+.modal-form-input:focus {
+  border: 1.5px solid #FD9222;
+}
+.modal-form-input::placeholder,
+.modal-form-textarea::placeholder {
+  color: rgba(64, 64, 64, 0.30);
+} 
+.modal-form-icon {
+  position: absolute;
+  /* center icon */
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  fill: none;
+  stroke: #404040;
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  stroke: #FD9222;
+}
+.modal-form-textarea {
+  height: 137px;
+  padding: 22px 24px;
+  resize: none;
+}
+
+.modal-form-btn {
+  margin-top: 41.5px;
 }

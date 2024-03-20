@@ -481,6 +481,46 @@
     </div>
   </footer>
 
+  <!-- modal windows -->
+  <div class="backdrop is-open">
+    <div class="modal-reviews">
+      <button class="modal-btn-close" type="button">
+        <svg class="modal--btn-close-icon" width="28" height="28">
+          <use href="./images/sprite.svg#icon-x-close"></use>
+        </svg>
+      </button>
+      <p class="modal-desc">LEAVE A REVIEW ABOUT <span class="accent">OUR CHOCOLATE</span></p>
+      <form class="modal-form" name="reviews" method="post">
+        <div class="modal-form-wrapper">
+          <label class="modal-form-label" for="User_name">User name</label>
+          <div class="modal-form-field">
+            <input class="modal-form-input" id="User_name" type="text" name="User_ame" placeholder="John">
+            <svg class="modal-form-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-user"></use>
+            </svg>
+          </div>
+          <label class="modal-form-label" for="email">Email</label>
+          <div class="modal-form-field">
+            <input class="modal-form-input" id="email" type="email" name="email" placeholder="">
+            <svg class="modal-form-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-mail"></use>
+            </svg>
+          </div>
+          <label class="modal-form-label" for="phone_number">Phone number</label>
+          <div class="modal-form-field">
+            <input class="modal-form-input" id="phone_number" type="tel" name="phone_number" placeholder="">
+            <svg class="modal-form-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <label class="modal-form-label">Comment</label>
+          <textarea class="modal-form-textarea" name="" id="" cols="" rows="" placeholder="Enter text"></textarea>
+        </div>
+        <button class="modal-form-btn" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
 </body>
 
 </html>
