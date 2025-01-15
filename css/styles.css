@@ -235,7 +235,6 @@ img {
   .subject {
     line-height: 1.17;
     font-size: 24px;
-    margin-bottom: 50px;
   }
 }
 .hero-scroll,
@@ -710,6 +709,11 @@ img {
 .made-subject {
   margin-bottom: 32px;
 }
+@media only screen and (min-width: 768px) {
+  .made-subject {
+      margin-bottom: 50px;
+    }
+}
 .made-wrapper {
 }
 @media only screen and (min-width: 1200px) {
@@ -810,22 +814,48 @@ img {
 }
 
 /* products section */
-.products {
-}
 .products-subject {
+  margin-bottom: 22px;
 }
 .products-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px 18px;
 }
 .products-item {
   border-radius: 15px;
   border: 1px solid rgba(17, 17, 17, 0.10);
   background-color: #FFF;
   text-align: center;
-  padding: 32px 20px;
-  width: calc((100% - 18px * 3) / 4);
+  width: 294px;
+  padding: 32px 52px;
+  margin: auto;
+}
+.products-item:not(:last-child) {
+  margin-bottom: 22px;
+}
+@media only screen and (min-width: 768px) {
+  .products-subject {
+      margin-bottom: 50px;
+    }
+  .products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    }
+  .products-item {
+    width: calc((100% - 32px * 1) / 2);
+    padding: 32px 53px;
+  }
+    .products-item:not(:last-child) {
+      margin-bottom: 0px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+  .products-list {
+      gap: 24px 18px;
+    }
+  .products-item {  
+    width: calc((100% - 18px * 3) / 4);
+    padding: 32px 20px;
+  }
 }
 .products-img {
 }
@@ -850,14 +880,44 @@ img {
 }
 
 /* top sellers section */
-.sellers {
+.sellers-subject {
+  margin-bottom: 32px;
 }
-.sellers-list {
-  display: flex;
-  gap: 16px;
+.sellers-list {  
 }
 .sellers-item {
-  width: calc((100% - 16px * 2) / 3);
+  width: 335px;
+}
+/* спрятать два посл. li */
+.sellers-item:nth-last-child(-n+2).sellers-item {
+   display: none;
+}
+@media only screen and (min-width: 768px) {
+  .sellers-subject {
+    margin-bottom: 50px;
+  }
+  .sellers-list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .sellers-item:nth-last-child(-n+2).sellers-item {
+    display: block;
+  }
+  .sellers-item:nth-child(3).sellers-item {
+    display: none;
+  }
+  .sellers-item {
+    width: calc((100% - 16px * 1) / 2);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .sellers-item {
+    width: calc((100% - 16px * 2) / 3);
+  }
+  .sellers-item:nth-child(3).sellers-item {
+    display: block;
+  }
 }
 .sellers-wrapper {
   position: relative;
